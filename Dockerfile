@@ -12,7 +12,7 @@ COPY . .
 ENV SQLX_OFFLINE=true
 
 # Build in release mode
-RUN cargo build --release
+RUN cargo build --features opentelemetry --release
 
 # Create runtime image
 FROM debian:stable-slim
